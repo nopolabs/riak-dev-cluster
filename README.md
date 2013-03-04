@@ -1,6 +1,6 @@
-# Riak Dev Cluster for OS X
+# Riak Dev Cluster for Ubuntu 12.x
 
-Easily run a 5-node [Riak](http://wiki.basho.com/Riak.html) cluster on OS X.
+Easily run a 5-node [Riak](http://wiki.basho.com/Riak.html) cluster on Ubuntu 12.x.
 
 * The names of the nodes are riak[1-5]@127.0.0.1
 * The HTTP port of riak1 is 11098: <http://127.0.0.1:11098>
@@ -13,7 +13,7 @@ Easily run a 5-node [Riak](http://wiki.basho.com/Riak.html) cluster on OS X.
 
 Clone the repository:
 
-    $ git clone git://github.com/simonvc/riak-dev-cluster.git
+    $ git clone git://github.com/nopolabs/riak-dev-cluster.git
 
 Go to the riak-dev-cluster directory:
 
@@ -22,6 +22,12 @@ Go to the riak-dev-cluster directory:
 There is a bootstrap command available that installs, starts and joins the riak cluster in one go:
 
     $ rake bootstrap
+
+The install target will download and build a copy of Riak from source.
+
+You should have Erlang installed first. Consult
+http://docs.basho.com/riak/latest/tutorials/installation/Installing-on-Debian-and-Ubuntu/#Installing-Riak-From-Source
+for details. 
 
 ## Control commands
 
@@ -41,9 +47,6 @@ Clear all data and restart the cluster:
 
     $ rake clear
 
-You can also install riaknostic (the riak-admin diag command):
-    $ rake install_riaknostic
-
 ## Other commands
 
 See all available commands:
@@ -54,10 +57,13 @@ See all available commands:
 
 Depending on your erlang cookie, you may have to use the commands with `sudo`.
 
-## Authors
+## Author
 
-* [Erick Dennis](https://github.com/edennis)
-* [Sebastian Röbke](https://github.com/boosty)
+* [Dan Revel](https://github.com/nopolabs)
 
-Updates by:
-* [Simon Vans-Colina](https://github.com/simonvc)
+This repo was cloned from https://github.com/simonvc/riak-dev-cluster
+
+I have editted the Rakefile to support Ubuntu 12.x.
+
+See https://github.com/simonvc/riak-dev-cluster for the OS/x version.
+
