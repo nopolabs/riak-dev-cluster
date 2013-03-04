@@ -61,7 +61,7 @@ Depending on your erlang cookie, you may have to use the commands with `sudo`.
 
 * [Dan Revel](https://github.com/nopolabs)
 
-This repo was cloned from https://github.com/simonvc/riak-dev-cluster
+This repo was cloned from an OS/x version at https://github.com/simonvc/riak-dev-cluster
 
 I have editted the Rakefile to support Ubuntu 12.x.
 
