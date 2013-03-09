@@ -71,6 +71,9 @@ end
 desc "install riak"
 task :install => [:fetch_riak, :make_riak, :copy_riak]
 
+desc "build riak-#{RIAK_VERSION}"
+task :build => [:fetch_riak, :make_riak]
+
 desc "ping all riak nodes"
 task :ping do
   (1..NUM_NODES).each do |n|
